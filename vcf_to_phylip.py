@@ -51,9 +51,22 @@ def vcf_parser(vcf_file_name):
 	# Make a sparse matrix row for the genotypes for each sample
 		# Create a matrix that adjusts the parameters (sequence length and sample)
 	# Replace '1' in sparse matrix row with ALT alleles 
-	# Include REF alleles within the sequence 
+	# Include REF alleles within the sequence
+        sparse_matrix_row = VCF_parse_genotypes(genotypes);
 	#return false
-	
+
+def VCF_parse_genotypes(genotypes):
+        value = []
+        column = []
+        col = -1
+        for genotype in genotypes:
+                col++
+                if genotype == 0:
+                        next
+                column.push(col)
+                value.push(genotype)
+        return (value,column)
+        
 # def phylip_format(sequences):
 	# Create a dictionary and push information 
 	# Print sample name 
